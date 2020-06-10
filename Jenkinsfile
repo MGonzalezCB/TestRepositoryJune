@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh 'echo "Building" >> Build.txt'
             }
         }
         stage('Test') {
@@ -16,6 +17,11 @@ pipeline {
             steps {
                 echo 'Deploying....'
             }
+        }
+    }
+    post {
+        always {
+            archiveArtifacts artifacts: 'Build.txt', onlyIfSuccessful: true
         }
     }
 }
