@@ -9,7 +9,6 @@ pipeline {
                 sh 'cd /Users/manuelgonzalezalbornoz/LocalJenkinsInstances/jenkins-home/workspace/Multi1_Develop'
                 sh 'pwd'
                 sh 'git status'
-                sh 'git commit -m "test"'
             }
         }
         stage('Test') {
