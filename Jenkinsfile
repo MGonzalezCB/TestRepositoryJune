@@ -5,8 +5,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'sleep 70'
-                sh 'sleep 5'
+                sh 'sleep 1'
+                sh 'sleep 1'
+                sh 'cd /Users/manuelgonzalezalbornoz/LocalJenkinsInstances/jenkins-home/workspace/Multi1_Develop'
             }
         }
         stage('Test') {
