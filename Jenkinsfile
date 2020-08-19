@@ -10,6 +10,8 @@ pipeline {
                 sh 'pwd'
                 //sh 'git status'
                 echo "${env.GIT_BRANCH}"
+                echo "${env.GIT_COMMIT}"
+                echo "${env.GIT_URL}"
             }
         }
         stage('Test') {
