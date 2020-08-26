@@ -25,9 +25,11 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 echo 'Creating Json....'
-                def data = readJSON text: '{}'
-                data.a = "test: ${BUILD_NUMBER}" as String
-                writeJSON(file: 'MyFile.json', json: data, pretty: 4)
+                script {
+                    def data = readJSON text: '{}'
+                    data.a = "test: ${BUILD_NUMBER}" as String
+                    writeJSON(file: 'MyFile.json', json: data, pretty: 4)
+                }
             }
         }
     }
