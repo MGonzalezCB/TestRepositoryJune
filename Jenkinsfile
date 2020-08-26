@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'sleep 1'
+                sh 'sleep 60'
                 //sh 'cd /Users/manuelgonzalezalbornoz/LocalJenkinsInstances/jenkins-home/workspace/Multi1_Develop'
                 sh 'pwd'
                 //sh 'git status'
@@ -25,11 +25,6 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 echo 'Creating Json....'
-                script {
-                    def data = readJSON text: '{}'
-                    data.a = "test: ${BUILD_NUMBER}" as String
-                    writeJSON(file: 'MyFile.json', json: data, pretty: 4)
-                }
             }
         }
     }
