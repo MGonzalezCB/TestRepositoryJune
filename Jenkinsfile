@@ -13,6 +13,9 @@ pipeline {
                 echo "${env.GIT_BRANCH}"
                 echo "${env.GIT_COMMIT}"
                 echo "${env.GIT_URL}"
+                println "${env.GIT_BRANCH}"
+                println "${env.GIT_COMMIT}"
+                println "${env.GIT_URL}"
                 }
             }
         }
