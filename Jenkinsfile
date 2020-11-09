@@ -18,6 +18,7 @@ pipeline {
                 println "${env.GIT_COMMIT}"
                 println "${env.GIT_URL}"
                 println "Branch name using println is ${env.GIT_BRANCH}"
+                println "New update 1"
                 }
             }
         }
