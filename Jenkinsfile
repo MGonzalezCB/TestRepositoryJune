@@ -1,4 +1,4 @@
-node("any"){
+agent("any"){
 checkout([$class: 'GitSCM',
 branches : scm.branches,
 userRemoteConfigs: scm.userRemoteConfigs,
