@@ -1,4 +1,4 @@
 def call(Map config = [:]) {
     sh "echo Hello ${config.name}. Today is: ${config.dayOfWeek}."
-    sh "echo version 6"
+    sh "echo version 7"
 }
