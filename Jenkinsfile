@@ -14,5 +14,15 @@ node {
             ]
         //gitTool: "NATIVE_GIT"]
         )
+        
+        //--------------
+/*        withCredentials([usernamePassword(credentialsId: 'my-credentials-id', usernameVariable: 'GIT_USERNAME', passwordVariable: 'GIT_PASSWORD')]){    
+        sh('''
+        git config --local credential.helper "!f() { echo username=\\$GIT_USERNAME; echo password=\\$GIT_PASSWORD; }; f"
+        git fetch --force --progress --depth 1 -- $REPO_URL +refs/tags/*:refs/tags/*
+        ''')
+        }
+  */      //--------------
+        
         sh("git tag -l | wc -l")
 }
