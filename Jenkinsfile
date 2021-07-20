@@ -25,4 +25,6 @@ node {
   */      //--------------
         
         sh("git tag -l | wc -l")
+        
+        sh("git tag -l | wc -l")
 }
